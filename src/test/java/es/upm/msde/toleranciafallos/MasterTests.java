@@ -29,4 +29,19 @@ class MasterTests {
         Master.threadSummary();
     }
 
+    @Test
+    void zkSynchronizedMaster() throws Exception {
+        logger.info("Test Zk Client with timeout 1500 ms");
+        MasterSynchronous m = new MasterSynchronous("127.0.0.2:2181");
+        m.startZK();
+        m.runLeader();
+        if (m.getIsLeader()) {
+            logger.info("This znode is the leader");
+            Thread.sleep(5000);
+        }   else {
+            logger.info("Other znode is the leader");
+        }
+        logger.info("Main::Thread sleep 60 s");
+        m.stopZK();
+    }
 }
