@@ -3,6 +3,9 @@ package es.upm.msde.toleranciafallos;
 import java.io.IOException;
 import java.lang.Exception;
 import java.lang.String;
+import java.lang.Thread;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -43,6 +46,12 @@ public class Master implements Watcher {
     public void process(WatchedEvent e) { //Callback interface
         logger.info("Master::Process");
         logger.info(e);
+    }
+
+    public static void threadSummary() {
+        Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
+        logger.info("Threads number: " + threadSet.size() + " names: " +
+                threadSet.stream().map(Thread::getName).collect(Collectors.toList()));
     }
 
     public static void main(String[] args) throws Exception {

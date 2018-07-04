@@ -20,10 +20,13 @@ class MasterTests {
     void zkCliWith1500ms() throws Exception {
         logger.info("Test Zk Client with timeout 1500 ms");
         Master m = new Master("127.0.0.2:2181");
+        Master.threadSummary();
         m.startZK();
+        Master.threadSummary();
         logger.info("Main::Thread sleep 60 s");
-        Thread.sleep(60000); //wait for a bit
+        Thread.sleep(5000); //wait for a bit
         m.stopZK();
+        Master.threadSummary();
     }
 
 }
