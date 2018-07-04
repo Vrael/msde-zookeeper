@@ -11,9 +11,7 @@ Practices:
 Installation:
 
 This is a Java Project 1.8 which uses Maven 3.5.4
-The practices I and II are implemented using a JUnit Test Case so to be able run it you just need perform:
-
-`mvn install`
+The practices are implemented using a JUnit Test Case so to be able run it you just need perform `mvn install` after up zookeeper on 127.0.0.2:2181 
 
 Console log displays the output for both practices on Test maven section.
 ---
@@ -42,3 +40,4 @@ org.apache.zookeeper.Watcher.Event.EventType:
     - NodeDeleted 
     - None
 
+All sources are on: [Github](https://github.com/Vrael/msde-zookeeper)
