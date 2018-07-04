@@ -1,10 +1,11 @@
 # MSDE Fault Tolerance: Zookeeper
 
 Practices:
--   I. Synchronous Master (2015_Zookeper_Chapter3.pdf)
--  II. Getting Mastership (2015_Zookeper_Chapter3.pdf)
-- III. Synchronous Master Election (2016_Zookeeper_Chapter3_2.pdf)
--  IV. Interface Watcher (2016_Zookeeper_Chapter3_2.pdf)
+-   I. Synchronous Master (2015_Zookeper_Chapter3.pdf): Master.java
+-  II. Getting Mastership (2015_Zookeper_Chapter3.pdf): Master.java
+- III. Synchronous Master Election (2016_Zookeeper_Chapter3_2.pdf): MasterSynchronous.java
+-  IV. Interface Watcher (2016_Zookeeper_Chapter3_2.pdf): README.md
+-   V. Asynchronous Master Election (2016_Zookeeper_Chapter3_2.pdf) MasterAsynchronous.java
 ---
 
 Installation:

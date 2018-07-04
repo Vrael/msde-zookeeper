@@ -44,4 +44,14 @@ class MasterTests {
         logger.info("Main::Thread sleep 60 s");
         m.stopZK();
     }
+
+    @Test
+    void zkAsynchronizedMaster() throws Exception {
+        logger.info("Test Zk Client with timeout 1500 ms");
+        MasterAsynchronous m = new MasterAsynchronous("127.0.0.2:2181");
+        m.startZK();
+        m.runLeader();
+        logger.info("Main::Thread sleep 60 s");
+        m.stopZK();
+    }
 }
